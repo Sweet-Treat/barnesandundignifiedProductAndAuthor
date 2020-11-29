@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import ProductDetails from './productDetails.jsx';
+import Tabs from './tabs.jsx';
+//import './app.css';
 
 
 class App extends React.Component {
@@ -14,6 +16,7 @@ class App extends React.Component {
         publisherLink: '',
         publicationDate: '',
         series: '',
+        seriesLink: '',
         editionDescription: '',
         pages: undefined,
         salesRank: undefined,
@@ -29,30 +32,36 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/products/53211470974772')
+    console.log('ISBN13 Props:', this.props.isbn13);
+    return axios.get(`http://localhost:5001/products/${this.props.isbn13}`)
       .then((response)=> {
       // handle success
         console.log('get a specific book:', response);
         this.setState({book: response.data});
+        return response;
       })
       .catch((error)=> {
       // handle error
         console.log('error:', error);
       });
-
   }
 
   render() {
     return (
-      <div>
-        <h2 className="productDetails">Product Details</h2>
-        <ProductDetails
-          record={this.state.book}
-        />
+      <div className="tabsBox">
+        <Tabs>
+          <div label="Product Details">
+            <ProductDetails
+              record={this.state.book}
+            />
+          </div>
+          <div label="Author">
+            About the author
+          </div>
+        </Tabs>
       </div>
     );
   }
 }
-
 
 export default App;

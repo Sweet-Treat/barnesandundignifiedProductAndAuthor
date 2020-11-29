@@ -17,6 +17,7 @@ let productDetailsSchema = mongoose.Schema({
   publisherLink: String,
   publicationDate: Date,
   series: String,
+  seriesLink: String,
   editionDescription: String,
   pages: Number,
   salesRank: Number,

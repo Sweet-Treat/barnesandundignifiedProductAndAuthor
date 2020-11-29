@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+"<App isbn13=\\"9781571311931\\">
+  <div className=\\"tabsBox\\">
+    <Tabs>
+      <div className=\\"tabs\\">
+        <ol className=\\"tab-list\\">
+          <Tab activeTab=\\"Product Details\\" label=\\"Product Details\\" onClick={[Function: bound onClickTabItem]}>
+            <li className=\\"tab-list-item tab-list-active\\" onClick={[Function: bound onClick]}>
+              Product Details
+            </li>
+          </Tab>
+          <Tab activeTab=\\"Product Details\\" label=\\"Author\\" onClick={[Function: bound onClickTabItem]}>
+            <li className=\\"tab-list-item\\" onClick={[Function: bound onClick]}>
+              Author
+            </li>
+          </Tab>
+        </ol>
+        <div className=\\"tab-content\\">
+          <ProductDetails record={{...}}>
+            <div className=\\"wrapper\\">
+              <div className=\\"slide\\">
+                <h2>
+                  Product Details
+                </h2>
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>
+                        ISBN-13: 
+                      </th>
+                      <td />
+                    </tr>
+                    <tr>
+                      <th>
+                        Publisher: 
+                      </th>
+                      <td>
+                        <a href=\\"\\" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        Publication Date: 
+                      </th>
+                      <td>
+                        Invalid Date
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        Pages: 
+                      </th>
+                      <td />
+                    </tr>
+                    <tr>
+                      <th>
+                        Sales Rank: 
+                      </th>
+                      <td />
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </ProductDetails>
+        </div>
+      </div>
+    </Tabs>
+  </div>
+</App>"
+`;

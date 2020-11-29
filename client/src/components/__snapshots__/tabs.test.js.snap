@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs React test render Tabs 1`] = `
+"<Tabs>
+  <div className=\\"tabs\\">
+    <ol className=\\"tab-list\\">
+      <Tab activeTab=\\"Product Details\\" label=\\"Product Details\\" onClick={[Function: bound onClickTabItem]}>
+        <li className=\\"tab-list-item tab-list-active\\" onClick={[Function: bound onClick]}>
+          Product Details
+        </li>
+      </Tab>
+      <Tab activeTab=\\"Product Details\\" label=\\"Author\\" onClick={[Function: bound onClickTabItem]}>
+        <li className=\\"tab-list-item\\" onClick={[Function: bound onClick]}>
+          Author
+        </li>
+      </Tab>
+    </ol>
+    <div className=\\"tab-content\\">
+      <ProductDetails record={{...}}>
+        <div className=\\"wrapper\\">
+          <div className=\\"slide\\">
+            <h2>
+              Product Details
+            </h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    ISBN-13: 
+                  </th>
+                  <td>
+                    9781524763169
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Publisher: 
+                  </th>
+                  <td>
+                    <a href=\\"/publisher\\">
+                      Crown Publishing Group
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Publication Date: 
+                  </th>
+                  <td>
+                    11/17/2020
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Pages: 
+                  </th>
+                  <td>
+                    768
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Sales Rank: 
+                  </th>
+                  <td>
+                    1
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Product dimensions: 
+                  </th>
+                  <td>
+                    6.40(w) x 9.40(h) x 1.50(d)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </ProductDetails>
+    </div>
+  </div>
+</Tabs>"
+`;

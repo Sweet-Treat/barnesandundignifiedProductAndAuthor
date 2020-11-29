@@ -1,27 +1,15 @@
 const Database = require ('./index.js');
-/*
-// for next stages that we will create records with the same ISBN-13
-const product = new Database.ProductDetails({
-  isbn13: "9780062011688",
-  publisherName: "HarperCollins e-books",
-  publisherLink: "/publisher",
-  publicationDate: 11/23/2010,
-  pages: 272,
-  salesRank: 488829,
-  fileSize: '5 MB'
-});
-/*
-product.save(function (err, product) {
-  if (err) return console.error(err);
-  console.log("A new book was saved in MongoDB!");
-});*/
-/*
-product.save()
-  .then(product => console.log('The product ' + product.isbn13 + ' has been added.'))
-  .catch(err => console.log(err))
-  //.finally(() => user.db.close());
-*/
-let getRandomIntInclusive = (min, max) => {
+const staticData = require ('./staticData.js');
+
+let arrOfBooks = staticData.arrOfBooks;
+for (let i = 0; i < arrOfBooks.length; i++) {
+  const product = new Database.ProductDetails(arrOfBooks[i]);
+  product.save()
+    .then(product => console.log('The product ' + product.isbn13 + ' has been added.'))
+    .catch(err => console.log(err));
+}
+
+var getRandomIntInclusive = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -84,11 +72,13 @@ for (var i = 0; i < 200; i++) {
   let randomSeries = getRandomValueFromArr(series);
   newRecord.series = randomSeries;
 
+  newRecord.seriesLink = '/series';
+
   let bookCategories = ['Nonfiction', 'Fiction', 'History', 'Fantasy', 'Romance', 'Home and garden', 'Graphic novel', 'Humor', 'Autobiography', 'Business/economics', 'Cookbook', 'Diary'];
   let randomBookCategory = getRandomValueFromArr(bookCategories);
   newRecord.bookCategory = randomBookCategory;
 
-  let ageRange = ["", "6-8 Years", "18 years", "4-8 years", "10 years", "13 years", "40 years"];
+  let ageRange = ['', '6-8 Years', '18 years', '4-8 years', '10 years', '13 years', '40 years'];
   let randomAgeRange = getRandomValueFromArr(ageRange);
   newRecord.ageRange = randomAgeRange;
 
@@ -98,13 +88,13 @@ for (var i = 0; i < 200; i++) {
   // sales rank
   newRecord.salesRank = getRandomIntInclusive(0, 6000000000);
 
-  let format = ["", "NOOK Book"];
+  let format = ['', 'NOOK Book'];
 
   let randomFormat = getRandomValueFromArr(format);
   newRecord.format = randomFormat;
 
-  if (newRecord.format === "NOOK Book") {
-    let soldBy = ["Barnes & Noble", "Penguin Random House Publisher Services", "Charles River Editors", "Sai ePublications", "HarperCollins Publishers", "SIMON & SCHUSTER", "Random House"];
+  if (newRecord.format === 'NOOK Book') {
+    let soldBy = ['Barnes & Noble', 'Penguin Random House Publisher Services', 'Charles River Editors', 'Sai ePublications', 'HarperCollins Publishers', 'SIMON & SCHUSTER', 'Random House'];
     let randomSoldBy = getRandomValueFromArr(soldBy);
     newRecord.soldBy = randomSoldBy;
 
@@ -112,19 +102,19 @@ for (var i = 0; i < 200; i++) {
     let randomFileSize = getRandomValueFromArr(fileSize);
     newRecord.fileSize = randomFileSize;
 
-    let note = ["", "This product may take a few minutes to load!", "This product may take a few minutes to download."];
+    let note = ['', 'This product may take a few minutes to load!', 'This product may take a few minutes to download.'];
     let randomNote = getRandomValueFromArr(note);
     newRecord.note = randomNote;
 
   } else {
 
-  let editionDescription = ['', 'Reprint', 'Sixth Edition', 'New Edition', 'Second Edition'];
-  let randomEditionDescription = getRandomValueFromArr(editionDescription);
-  newRecord.editionDescription = randomEditionDescription;
+    let editionDescription = ['', 'Reprint', 'Sixth Edition', 'New Edition', 'Second Edition'];
+    let randomEditionDescription = getRandomValueFromArr(editionDescription);
+    newRecord.editionDescription = randomEditionDescription;
 
-  let productDimensions = ['', ' 6.30(w) x 9.00(h) x 1.40(d)', '6.13(w) x 9.25(h) x (d)', '5.50(w) x 8.25(h) x 1.11(d)', '5.40(w) x 8.20(h) x 0.80(d)', '5.50(w) x 8.50(h) x 1.10(d)'];
-  let randomProductDimensions = getRandomValueFromArr(productDimensions);
-  newRecord.productDimensions = randomProductDimensions;
+    let productDimensions = ['', ' 6.30(w) x 9.00(h) x 1.40(d)', '6.13(w) x 9.25(h) x (d)', '5.50(w) x 8.25(h) x 1.11(d)', '5.40(w) x 8.20(h) x 0.80(d)', '5.50(w) x 8.50(h) x 1.10(d)'];
+    let randomProductDimensions = getRandomValueFromArr(productDimensions);
+    newRecord.productDimensions = randomProductDimensions;
 
   }
 
