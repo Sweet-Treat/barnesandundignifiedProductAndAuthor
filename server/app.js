@@ -17,7 +17,7 @@ app.get('/products/:isbn13', (req, res) => {
     .then ((record)=> {
       console.log('record is', record);
       if (record === null) {
-        throw 'Record does not found or isbn is not valid';
+        throw 'Record is not found or isbn is not valid';
       } else {
         res.status(200).send(record);
       }
