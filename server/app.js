@@ -1,12 +1,14 @@
 
 const express = require('express');
 const app = express();
+var cors = require('cors');
 const port = 5001;
 const bodyParser = require ('body-parser');
 const db = require('../db/index.js');
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.json());
+app.use(cors());
 
 
 
@@ -55,8 +57,8 @@ app.get('/category/:bookCategory', (req, res) => {
     });
 });
 app.use(express.static(__dirname + '/../client/dist'));
-// var server = app.listen(port, () => {
-//   console.log(`Example app listening at http://localhost:${port}`);
-// });
+//var server = app.listen(port, () => {
+  //console.log(`Example app listening at http://localhost:${port}`);
+//});
 
 module.exports = app;
