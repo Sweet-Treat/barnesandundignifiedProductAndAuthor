@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import Tab from './tab.jsx';
+import styled from 'styled-components';
+
+const TabList = styled.ol`
+  border-bottom: 1px solid #ccc;
+  padding-left: 50;
+`;
 
 class Tabs extends Component {
 
@@ -21,9 +27,9 @@ class Tabs extends Component {
   render() {
 
     return (
-      <div className="tabs">
+      <div>
         {/*tabs Names*/}
-        <ol className="tab-list">
+        <TabList>
           {this.props.children.map((child) => {
             const label = child.props.label;
 
@@ -36,9 +42,9 @@ class Tabs extends Component {
               />
             );
           })}
-        </ol>
+        </TabList>
         {/*the tab content depends on which tab you select*/}
-        <div className="tab-content">
+        <div>
           {this.props.children.map((child) => {
             if (child.props.label !== this.state.activeTab) { return undefined; }
             return child.props.children;

@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import styled from 'styled-components';
 import ProductDetails from './productDetails.jsx';
 import Tabs from './tabs.jsx';
 //import './app.css';
 
+const TabsBox = styled.div`
+  width: 572px;
+  margin: 0 auto;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -48,7 +53,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="tabsBox">
+      <TabsBox>
         <Tabs>
           <div label="Product Details">
             <ProductDetails
@@ -59,7 +64,7 @@ class App extends React.Component {
             About the author
           </div>
         </Tabs>
-      </div>
+      </TabsBox>
     );
   }
 }
