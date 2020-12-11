@@ -1,13 +1,13 @@
-
+/*
 *,
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-}
+}*/
 
- #product-details h2 {
+ /*#product-details h2 {
   text-align: center;
   font-family: 'Playfair', Georgia, serif;
   display: block;
@@ -16,13 +16,15 @@
   font-weight: 500;
   text-align: center;
   width:100%;
-}
+}*/
 
+/*
 #product-details .tabsBox {
   width: 70%;
   margin: 0 auto;
-}
-#product-details table {
+}*/
+
+/*#product-details table {
   font-family: Lato,sans-serif;
   font-size: 14px;
   margin-left: auto;
@@ -30,54 +32,57 @@
   border-collapse: collapse;
 
 
-}
-
+}*/
+/*
 #product-details th {
   color: 26, 26, 92, 0.7rgba();
   font-size: 14px;
   font-weight: normal;
   text-align: left;
-}
+}*/
 
+/*
 #product-details tr {
   height: 35px;
-}
+}*/
 
+/*
 #product-details td {
   padding-left: 30px;
-}
+}*/
 
-
+/*
 #product-details a:link {
   color: rgb(16, 80, 9);
-}
+}*/
 
 /* visited link */
-#product-details a:visited {
+/*#product-details a:visited {
   color:  rgb(16, 80, 9);
-}
+}*/
 
 
 /* mouse over link */
-#product-details a:hover {
+/*#product-details a:hover {
   color:  rgb(16, 80, 9);
-};
+};*/
 
 
 /* selected link */
-#product-details a:active {
+/*#product-details a:active {
   color:  rgb(16, 80, 9);
 };
-
+*/
 
 /* sliding table*/
-#product-details .wrapper {
+/*#product-details .wrapper {
   position: relative;
   overflow: hidden;
   width: 500px ;
   height: 500px;
-}
+}*/
 
+/*
 #product-details .slide {
   position: relative;
   left: -1000px;
@@ -87,20 +92,22 @@
   -webkit-animation: slide 0.5s forwards;
   -webkit-animation-delay: 2s;
   animation: slide 0.5s forwards;
-}
-
+}*/
+/*
 @-webkit-keyframes slide {
   100% { left: 0; }
 }
-
+*/
+/*
 @keyframes slide {
   100% { left: 0; }
-}
+}*/
 
+/*
 #product-details .tab-list {  border-bottom: 1px solid #ccc;
   padding-left: 50;
-}
-
+}*/
+/*
 #product-details .tab-list-item {
   display: inline-block;
   list-style: none;
@@ -118,4 +125,4 @@
   border-width: 1px 1px 0 1px;
   color: black;
   text-decoration: underline;
-}
+}*/

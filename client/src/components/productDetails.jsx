@@ -1,5 +1,66 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styled, { keyframes } from 'styled-components';
+
+
+const Wrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 500px ;
+  height: 500px;
+`;
+
+const TabAnimation = keyframes`
+100% { left: 0; }
+`;
+
+const Slide = styled.div`
+  position: relative;
+  left: -1000px;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  animation: ${TabAnimation} 0.5s forwards;
+`;
+const TitleH2 = styled.h2`
+  text-align: center;
+  font-family: 'Playfair', Georgia, serif;
+  display: block;
+  font-size: 1.5em;
+  margin: 0.83em 0;
+  font-weight: 500;
+  text-align: center;
+  width:100%;
+`;
+
+const Table = styled.table`
+  font-family: Lato,sans-serif;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+`;
+
+const TableTr = styled.tr`
+  height: 35px;
+`;
+
+const TableTd = styled.td`
+  padding-left: 30px;
+`;
+
+const TableTh = styled.th`
+  color: 26, 26, 92, 0.7rgba();
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+`;
+const Link = styled.a`
+&:link, &:visted, &:hover, &:active {
+  color: rgb(16, 80, 9);
+}
+`;
+
 class ProductDetails extends React.Component {
   render() {
     //console.log('ProductDetails react instance');
@@ -14,106 +75,106 @@ class ProductDetails extends React.Component {
 
     let seriesRender;
     if (series !== '') {
-      seriesRender = <tr>
-        <th>Series: </th>
-        <td><a href={this.props.record.seriesLink}>{series}</a></td>
-      </tr>;
+      seriesRender = <TableTr>
+        <TableTh>Series: </TableTh>
+        <TableTd><Link href={this.props.record.seriesLink}>{series}</Link></TableTd>
+      </TableTr>;
     }
 
     let editionRender;
     if (edition !== undefined && edition !== '') {
-      editionRender = <tr>
-        <th>Edition description: </th>
-        <td>{edition}</td>
-      </tr>;
+      editionRender = <TableTr>
+        <TableTh>Edition description: </TableTh>
+        <TableTd>{edition}</TableTd>
+      </TableTr>;
     }
 
     let dimensionsRender;
     if (dimensions !== undefined && dimensions !== '') {
-      dimensionsRender = <tr>
-        <th>Product dimensions: </th>
-        <td>{dimensions}</td>
-      </tr>;
+      dimensionsRender = <TableTr>
+        <TableTh>Product dimensions: </TableTh>
+        <TableTd>{dimensions}</TableTd>
+      </TableTr>;
     }
 
     let sizeRender;
     if (size !== undefined && size !== '') {
-      sizeRender = <tr>
-        <th>File size: </th>
-        <td>{size}</td>
-      </tr>;
+      sizeRender = <TableTr>
+        <TableTh>File size: </TableTh>
+        <TableTd>{size}</TableTd>
+      </TableTr>;
     }
 
     let soldByRender;
     if (sold !== '' && sold !== undefined) {
-      soldByRender = <tr>
-        <th>Sold by:</th>
-        <td>{sold}</td>
-      </tr>;
+      soldByRender = <TableTr>
+        <TableTh>Sold by:</TableTh>
+        <TableTd>{sold}</TableTd>
+      </TableTr>;
     }
 
     let formatRender;
     if (format !== '') {
-      formatRender = <tr>
-        <th>Format:</th>
-        <td>{format}</td>
-      </tr>;
+      formatRender = <TableTr>
+        <TableTh>Format:</TableTh>
+        <TableTd>{format}</TableTd>
+      </TableTr>;
     }
 
     let noteRender;
     if (note !== undefined && note !== '') {
-      noteRender = <tr>
-        <th>Note</th>
-        <td>{note}</td>
-      </tr>;
+      noteRender = <TableTr>
+        <TableTh>Note</TableTh>
+        <TableTd>{note}</TableTd>
+      </TableTr>;
     }
 
     let ageRangeRender;
     if (age !== '') {
-      ageRangeRender = <tr>
-        <th>Age range</th>
-        <td>{age}</td>
-      </tr>;
+      ageRangeRender = <TableTr>
+        <TableTh>Age range</TableTh>
+        <TableTd>{age}</TableTd>
+      </TableTr>;
     }
 
     const dateStr = this.props.record.publicationDate;
     let dateRender;
     let date = new Date(dateStr);
-    dateRender = <tr>
-      <th>Publication Date: </th>
-      <td>{date.toLocaleDateString('en-US')}</td>
-    </tr>;
+    dateRender = <TableTr>
+      <TableTh>Publication Date: </TableTh>
+      <TableTd>{date.toLocaleDateString('en-US')}</TableTd>
+    </TableTr>;
 
     return (
-      <div className="wrapper">
-        <div className="slide">
-          <h2>Product Details</h2>
-          <table>
+      <Wrapper>
+        <Slide>
+          <TitleH2>Product Details</TitleH2>
+          <Table>
             <tbody>
-              <tr>
-                <th>ISBN-13: </th>
-                <td>{this.props.record.isbn13}</td>
-              </tr>
-              <tr>
-                <th>Publisher: </th>
-                <td>
-                  <a href={this.props.record.publisherLink}>{this.props.record.publisherName}</a>
-                </td>
-              </tr>
+              <TableTr>
+                <TableTh>ISBN-13: </TableTh>
+                <TableTd>{this.props.record.isbn13}</TableTd>
+              </TableTr>
+              <TableTr>
+                <TableTh>Publisher: </TableTh>
+                <TableTd>
+                  <Link href={this.props.record.publisherLink}>{this.props.record.publisherName}</Link>
+                </TableTd>
+              </TableTr>
 
               {dateRender}
               {seriesRender}
               {soldByRender}
               {formatRender}
               {editionRender}
-              <tr>
-                <th>Pages: </th>
-                <td>{this.props.record.pages}</td>
-              </tr>
-              <tr>
-                <th>Sales Rank: </th>
-                <td>{this.props.record.salesRank}</td>
-              </tr>
+              <TableTr>
+                <TableTh>Pages: </TableTh>
+                <TableTd>{this.props.record.pages}</TableTd>
+              </TableTr>
+              <TableTr>
+                <TableTh>Sales Rank: </TableTh>
+                <TableTd>{this.props.record.salesRank}</TableTd>
+              </TableTr>
 
               {sizeRender}
               {dimensionsRender}
@@ -121,9 +182,9 @@ class ProductDetails extends React.Component {
               {ageRangeRender}
 
             </tbody>
-          </table>
-        </div>
-      </div>
+          </Table>
+        </Slide>
+      </Wrapper>
 
 
     );
