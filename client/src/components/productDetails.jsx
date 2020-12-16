@@ -2,14 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled, { keyframes } from 'styled-components';
 
-
-const Wrapper = styled.div`
-  position: relative;
-  overflow: hidden;
-  width: 500px ;
-  height: 500px;
-`;
-
 const TabAnimation = keyframes`
 100% { left: 0; }
 `;
@@ -18,7 +10,7 @@ const Slide = styled.div`
   position: relative;
   left: -1000px;
   width: 500px;
-  height: 500px;
+  height: 350px;
   margin: 0 auto;
   animation: ${TabAnimation} 0.5s forwards;
 `;
@@ -146,45 +138,45 @@ class ProductDetails extends React.Component {
     </TableTr>;
 
     return (
-      <Wrapper>
-        <Slide>
-          <TitleH2>Product Details</TitleH2>
-          <Table>
-            <tbody>
-              <TableTr>
-                <TableTh>ISBN-13: </TableTh>
-                <TableTd>{this.props.record.isbn13}</TableTd>
-              </TableTr>
-              <TableTr>
-                <TableTh>Publisher: </TableTh>
-                <TableTd>
-                  <Link href={this.props.record.publisherLink}>{this.props.record.publisherName}</Link>
-                </TableTd>
-              </TableTr>
 
-              {dateRender}
-              {seriesRender}
-              {soldByRender}
-              {formatRender}
-              {editionRender}
-              <TableTr>
-                <TableTh>Pages: </TableTh>
-                <TableTd>{this.props.record.pages}</TableTd>
-              </TableTr>
-              <TableTr>
-                <TableTh>Sales Rank: </TableTh>
-                <TableTd>{this.props.record.salesRank}</TableTd>
-              </TableTr>
+      <Slide>
+        <TitleH2>Product Details</TitleH2>
+        <Table>
+          <tbody>
+            <TableTr>
+              <TableTh>ISBN-13: </TableTh>
+              <TableTd>{this.props.record.isbn13}</TableTd>
+            </TableTr>
+            <TableTr>
+              <TableTh>Publisher: </TableTh>
+              <TableTd>
+                <Link href={this.props.record.publisherLink}>{this.props.record.publisherName}</Link>
+              </TableTd>
+            </TableTr>
 
-              {sizeRender}
-              {dimensionsRender}
-              {noteRender}
-              {ageRangeRender}
+            {dateRender}
+            {seriesRender}
+            {soldByRender}
+            {formatRender}
+            {editionRender}
+            <TableTr>
+              <TableTh>Pages: </TableTh>
+              <TableTd>{this.props.record.pages}</TableTd>
+            </TableTr>
+            <TableTr>
+              <TableTh>Sales Rank: </TableTh>
+              <TableTd>{this.props.record.salesRank}</TableTd>
+            </TableTr>
 
-            </tbody>
-          </Table>
-        </Slide>
-      </Wrapper>
+            {sizeRender}
+            {dimensionsRender}
+            {noteRender}
+            {ageRangeRender}
+
+          </tbody>
+        </Table>
+      </Slide>
+
 
 
     );
