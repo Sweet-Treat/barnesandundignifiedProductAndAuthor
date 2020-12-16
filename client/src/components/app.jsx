@@ -11,6 +11,13 @@ const TabsBox = styled.div`
   margin: 0 auto;
 `;
 
+const Wrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 500px ;
+  height: 300px;
+`;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -55,14 +62,14 @@ class App extends React.Component {
     return (
       <TabsBox>
         <Tabs>
-          <div label="Product Details">
+          <Wrapper label="Product Details">
             <ProductDetails
               record={this.state.book}
             />
-          </div>
-          <div label="Author">
+          </Wrapper>
+          <Wrapper label="Author">
             About the author
-          </div>
+          </Wrapper>
         </Tabs>
       </TabsBox>
     );
@@ -70,3 +77,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// to check the wrapper class if it is needed.
