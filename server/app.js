@@ -56,6 +56,17 @@ app.get('/category/:bookCategory', (req, res) => {
       res.status(500).send(error);
     });
 });
+
+// Author details - get an author
+app.get('/author/:isbn13', (req, res) => {
+  console.log('ISBN:', req.params.isbn13);
+  db.AuthorDetails.findOne({isbn13: req.params.isbn13})
+    .populate('authorDetails').exec((err, authorDetails) => {
+      console.log("Populated AuthorDetails", authorDetails);
+      return authorDetails;
+    });
+});
+
 app.use(express.static(__dirname + '/../client/dist'));
 //var server = app.listen(port, () => {
   //console.log(`Example app listening at http://localhost:${port}`);
