@@ -22,6 +22,7 @@ const TitleH2 = styled.h2`
   margin: 0.83em 0;
   font-weight: 500;
   text-align: center;
+  padding: 20px 0 0 0;
   width:100%;
 `;
 
@@ -64,6 +65,7 @@ class ProductDetails extends React.Component {
     const format = this.props.record.format;
     const note = this.props.record.note;
     const age = this.props.record.ageRange;
+    const dateStr = this.props.record.publicationDate;
 
     let seriesRender;
     if (series !== '') {
@@ -129,7 +131,7 @@ class ProductDetails extends React.Component {
       </TableTr>;
     }
 
-    const dateStr = this.props.record.publicationDate;
+
     let dateRender;
     let date = new Date(dateStr);
     dateRender = <TableTr>
@@ -161,11 +163,11 @@ class ProductDetails extends React.Component {
             {editionRender}
             <TableTr>
               <TableTh>Pages: </TableTh>
-              <TableTd>{this.props.record.pages}</TableTd>
+              <TableTd>{new Intl.NumberFormat().format(this.props.record.pages)}</TableTd>
             </TableTr>
             <TableTr>
               <TableTh>Sales Rank: </TableTh>
-              <TableTd>{this.props.record.salesRank}</TableTd>
+              <TableTd>{new Intl.NumberFormat().format(this.props.record.salesRank)}</TableTd>
             </TableTr>
 
             {sizeRender}
@@ -177,11 +179,9 @@ class ProductDetails extends React.Component {
         </Table>
       </Slide>
 
-
-
     );
   }
 }
 
-
 export default ProductDetails;
+

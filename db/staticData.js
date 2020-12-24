@@ -167,7 +167,7 @@ const arrOfBooks = [
 const arrOfAuthors = [
   {
     author: 'Barack Obama',
-    bio: 'Barack Obama was the 44th president of the United States, elected in November 2008 and holding office for two terms. He is the author of two previous New York Times bestselling books, Dreams from My Father and The Audacity of Hope, and the recipient of the 2009 Nobel Peace Prize. He lives in Washington, D.C., with his wife, Michelle. They have two daughters, Malia and Sasha.',
+    bio: 'was the 44th president of the United States, elected in November 2008 and holding office for two terms. He is the author of two previous New York Times bestselling books, Dreams from My Father and The Audacity of Hope, and the recipient of the 2009 Nobel Peace Prize. He lives in Washington, D.C., with his wife, Michelle. They have two daughters, Malia and Sasha.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,
@@ -215,7 +215,7 @@ const arrOfAuthors = [
   },
   {
     author: 'Lev Grossman',
-    bio: 'LEV GROSSMAN is a senior writer and book critic for Time magazine and author of the international bestselling novel Codex. He is also the creator of the Time blog Nerd World. Grossman holds degrees in comparative literature from Harvard and Yale. He lives in Brooklyn, NY.',
+    bio: 'is a senior writer and book critic for Time magazine and author of the international bestselling novel Codex. He is also the creator of the Time blog Nerd World. Grossman holds degrees in comparative literature from Harvard and Yale. He lives in Brooklyn, NY.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,
@@ -251,7 +251,7 @@ const arrOfAuthors = [
   },
   {
     author: 'Martha Hall Kelly',
-    bio: 'Martha Hall Kelly is the New York Times bestselling author of Lilac Girls. She lives in Connecticut, where she spends her days filling legal pads with stories and reading World War II books. Lost Roses is her second novel.',
+    bio: 'is the New York Times bestselling author of Lilac Girls. She lives in Connecticut, where she spends her days filling legal pads with stories and reading World War II books. Lost Roses is her second novel.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,
@@ -263,7 +263,7 @@ const arrOfAuthors = [
   },
   {
     author: 'Rumaan Alam',
-    bio: 'Rumaan Alam is the author of the novels Rich and Pretty, That Kind of Mother, and the instant New York Times bestseller Leave the World Behind. His writing has appeared in The New York Times, New York Magazine, The New Yorker, The New York Review of Books, Bookforum, and the New Republic, where he is a contributing editor. He studied writing at Oberlin College and lives in New York with his family.',
+    bio: 'is the author of the novels Rich and Pretty, That Kind of Mother, and the instant New York Times bestseller Leave the World Behind. His writing has appeared in The New York Times, New York Magazine, The New Yorker, The New York Review of Books, Bookforum, and the New Republic, where he is a contributing editor. He studied writing at Oberlin College and lives in New York with his family.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,
@@ -275,7 +275,7 @@ const arrOfAuthors = [
   },
   {
     author: 'Alex Trebek',
-    bio: 'Alex Trebek hosted the syndicated quiz show Jeopardy! for thirty-seven seasons, earning him seven Daytime Emmy Awards—including a Lifetime Achievement Award—and the Guinness World Record for most episodes of a game show hosted by the same presenter. Prior to Jeopardy!, he hosted various other quiz shows including The Wizard of Odds and High Rollers. He began his career with the Canadian Broadcasting Corporation, working there for more than a decade. He graduated from the University of Ottawa and held honorary doctorates from the University of Ottawa and Fordham University. He worked with the humanitarian organization World Vision since the early 1980s, and contributed to various other philanthropic organizations, including the USO, UNCF, National Geographic Society, and the Hope of the Valley Rescue Mission. Originally from Sudbury, Ontario, he resided in Los Angeles with his wife, Jean, until his death in 2020.',
+    bio: 'hosted the syndicated quiz show Jeopardy! for thirty-seven seasons, earning him seven Daytime Emmy Awards—including a Lifetime Achievement Award—and the Guinness World Record for most episodes of a game show hosted by the same presenter. Prior to Jeopardy!, he hosted various other quiz shows including The Wizard of Odds and High Rollers. He began his career with the Canadian Broadcasting Corporation, working there for more than a decade. He graduated from the University of Ottawa and held honorary doctorates from the University of Ottawa and Fordham University. He worked with the humanitarian organization World Vision since the early 1980s, and contributed to various other philanthropic organizations, including the USO, UNCF, National Geographic Society, and the Hope of the Valley Rescue Mission. Originally from Sudbury, Ontario, he resided in Los Angeles with his wife, Jean, until his death in 2020.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,

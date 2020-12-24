@@ -46,7 +46,7 @@ app.get('/category/:bookCategory', (req, res) => {
     .then ((records)=> {
       console.log('records are', records);
       if (records === null) {
-        throw 'Records do not found';
+        throw 'Records are not found';
       } else {
         res.status(200).send(records);
       }
@@ -58,12 +58,20 @@ app.get('/category/:bookCategory', (req, res) => {
 });
 
 // Author details - get an author
-app.get('/author/:isbn13', (req, res) => {
-  console.log('ISBN:', req.params.isbn13);
-  db.AuthorDetails.findOne({isbn13: req.params.isbn13})
-    .populate('authorDetails').exec((err, authorDetails) => {
-      console.log("Populated AuthorDetails", authorDetails);
-      return authorDetails;
+app.get('/author/:author', (req, res) => {
+  console.log('author:', req.params.author);
+  db.AuthorDetails.findOne({author: req.params.author})
+    .then ((authorRecord)=> {
+      console.log('authorRecord is', authorRecord);
+      if (authorRecord === null) {
+        throw 'authorRecord not found';
+      } else {
+        res.status(200).send(authorRecord);
+      }
+    })
+    .catch((error)=> {
+      console.log(error);
+      res.status(500).send(error);
     });
 });
 

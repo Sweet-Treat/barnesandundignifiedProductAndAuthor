@@ -149,7 +149,7 @@ for (var i = 0; i < authors.length; i++) {
     'He lived on a remote ranch in the high-desert mountains of Texas, where he pursued his interests in writing, photography, music, economics, and mathematics.\n He was the New York Times bestselling author of The Bridges of Madison County, which was adapted into a film starring Meryl Streep and Clint Eastwood and also as a successful Broadway musical, and Thousand Country Roads.\n He died in his home at age 77.'];
 
   let randomBio = getRandomValueFromArr(bio);
-  newAuthor.bio = newAuthor.author + ' ' + randomBio;
+  newAuthor.bio = randomBio;
 
   // data of Birth
   newAuthor.dateOfBirth = randomDate('01/01/1800', '11/01/2010');
@@ -186,10 +186,10 @@ for (var i = 0; i < authors.length; i++) {
   }
   //education
 
-  let educationOptions = ['', 'German elementary and secondary schools.\n Graduated from German Charles-Ferdinand University of Prague.', 'Graduated with highest honors in history from the University of Petrograd, 1924', 'A.A., Cayuga Community College; B.A.,\n Colgate University; M.F.A., Iowa Writers\'\n Workshop; M.A., University of Iowa', 'A.B. in Creative Writing, Princeton University;\n M.A. in Education, Harvard University', 'B.A.,The Citadel, 1967', 'B.A., University of Arizona, 1967; Ph.D.,\n University of Arizona, 1979; M.F.A.,', 'B.A., DePauw University, 1977; M.S., University of Arizona, 1981'];
+  let education = ['', 'German elementary and secondary schools.\n Graduated from German Charles-Ferdinand University of Prague.', 'Graduated with highest honors in history from the University of Petrograd, 1924', 'A.A., Cayuga Community College; B.A.,\nColgate University; M.F.A., Iowa Writers\'\n Workshop; M.A., University of Iowa', 'A.B. in Creative Writing, Princeton University;\n M.A. in Education, Harvard University', 'B.A.,The Citadel, 1967', 'B.A., University of Arizona, 1967; Ph.D.,\n University of Arizona, 1979; M.F.A.,', 'B.A., DePauw University, 1977; M.S., University of Arizona, 1981'];
 
-  let randomEducation = getRandomValueFromArr(educationOptions);
-  newAuthor.educationOptions =  randomEducation;
+  let randomEducation = getRandomValueFromArr(education);
+  newAuthor.education = randomEducation;
 
   // website
 
