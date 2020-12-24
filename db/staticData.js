@@ -1,4 +1,4 @@
-
+// productDetails
 const arrOfBooks = [
   { 'isbn13': '9781524763169',
     'author': 'Barack Obama',
@@ -163,4 +163,131 @@ const arrOfBooks = [
   }
 ];
 
-module.exports.arrOfBooks = arrOfBooks;
+// arrOfAuthors
+const arrOfAuthors = [
+  {
+    author: 'Barack Obama',
+    bio: 'was the 44th president of the United States, elected in November 2008 and holding office for two terms. He is the author of two previous New York Times bestselling books, Dreams from My Father and The Audacity of Hope, and the recipient of the 2009 Nobel Peace Prize. He lives in Washington, D.C., with his wife, Michelle. They have two daughters, Malia and Sasha.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: '/authors_images/barack_obama.jpg'
+  },
+  {
+    author: '',
+    bio: '',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: ''
+  },
+  {
+    author: 'Brandon Sanderson',
+    bio: 'Brandon Sanderson grew up in Lincoln, Nebraska. He lives in Utah with his wife and children and teaches creative writing at Brigham Young University. He is the author of such bestsellers as the Mistborn® trilogy and its sequels, The Alloy of Law, Shadows of Self, and The Bands of Mourning; the Stormlight Archive novels The Way of Kings, Words of Radiance, and Oathbringer; and other novels, including The Rithmatist and Steelheart. In 2013, he won a Hugo Award for Best Novella for The Emperor\'s Soul, set in the world of his acclaimed first novel, Elantris. Additionally, he was chosen to complete Robert Jordan\'s Wheel of Time® sequence.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: '/authors_images/brandon_sanderson.jpg'
+  },
+  {
+    author: 'Joe Abercrombie',
+    bio: 'Joe Abercrombie was born in Lancaster in 1974, spent much of his youth in imaginary worlds, and left school with a good idea of how to make stuff up. After graduating from Manchester University he worked as a TV editor, but he never stopped making stuff up, and his first book, The Blade Itself, was published in 2006. He has since written eight more novels and a collection of stories in his First Law and Shattered Sea series. He lives in Bath with his wife Lou and their three children Grace, Eve and Teddy, and makes stuff up full-time.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: ''
+  },
+  {
+    author: 'Lev Grossman',
+    bio: 'is a senior writer and book critic for Time magazine and author of the international bestselling novel Codex. He is also the creator of the Time blog Nerd World. Grossman holds degrees in comparative literature from Harvard and Yale. He lives in Brooklyn, NY.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: '/authors_images/lev_grossman.jpg'
+  },
+  {
+    author: 'Michael Johnston',
+    bio: 'MICHAEL JOHNSTON has always been an avid reader of science fiction and fantasy. He studied architecture and ancient history at Lehigh University and earned a master’s degree in architecture from Columbia University. Michael worked as an architect in New York City before switching to writing full time. He is the co-author of the YA Heart of Dread trilogy (Frozen, Stolen, and Golden) with his wife, Melissa de la Cruz. He lives in Los Angeles with his wife and daughter.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: '/authors_images/michael_johnston.jpg'
+  },
+  {
+    author: 'Isabelle Steiger',
+    bio: 'ISABELLE STEIGER was born in the city and grew up in the woods. She received her first notebook when she was eight, and she’s been filling them up ever since. She lives in New York, though her erstwhile companion, a very moody gray cat, has since retired and moved to Florida. The Empire’s Ghost is her first novel.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: ''
+  },
+  {
+    author: 'Martha Hall Kelly',
+    bio: 'is the New York Times bestselling author of Lilac Girls. She lives in Connecticut, where she spends her days filling legal pads with stories and reading World War II books. Lost Roses is her second novel.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: '/authors_images/martha_hall_kelly.jpg'
+  },
+  {
+    author: 'Rumaan Alam',
+    bio: 'is the author of the novels Rich and Pretty, That Kind of Mother, and the instant New York Times bestseller Leave the World Behind. His writing has appeared in The New York Times, New York Magazine, The New Yorker, The New York Review of Books, Bookforum, and the New Republic, where he is a contributing editor. He studied writing at Oberlin College and lives in New York with his family.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: '/authors_images/rumaan_alam.jpg'
+  },
+  {
+    author: 'Alex Trebek',
+    bio: 'hosted the syndicated quiz show Jeopardy! for thirty-seven seasons, earning him seven Daytime Emmy Awards—including a Lifetime Achievement Award—and the Guinness World Record for most episodes of a game show hosted by the same presenter. Prior to Jeopardy!, he hosted various other quiz shows including The Wizard of Odds and High Rollers. He began his career with the Canadian Broadcasting Corporation, working there for more than a decade. He graduated from the University of Ottawa and held honorary doctorates from the University of Ottawa and Fordham University. He worked with the humanitarian organization World Vision since the early 1980s, and contributed to various other philanthropic organizations, including the USO, UNCF, National Geographic Society, and the Hope of the Valley Rescue Mission. Originally from Sudbury, Ontario, he resided in Los Angeles with his wife, Jean, until his death in 2020.',
+    dateOfBirth: undefined,
+    placeOfBirth: '',
+    dateOfDeath: undefined,
+    placeOfDeath: '',
+    education: '',
+    hometown: '',
+    website: '',
+    image: ''
+  },
+];
+
+//module.exports.arrOfBooks = arrOfBooks;
+module.exports = {
+  arrOfBooks, arrOfAuthors,
+};

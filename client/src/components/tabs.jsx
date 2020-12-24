@@ -4,9 +4,17 @@ import styled from 'styled-components';
 
 const TabList = styled.ol`
   border-bottom: 1px solid #ccc;
-  padding-left: 50;
+  padding-left: 50px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
 `;
 
+const TabContent = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+`;
 class Tabs extends Component {
 
   constructor(props) {
@@ -44,12 +52,12 @@ class Tabs extends Component {
           })}
         </TabList>
         {/*the tab content depends on which tab you select*/}
-        <div>
+        <TabContent>
           {this.props.children.map((child) => {
             if (child.props.label !== this.state.activeTab) { return undefined; }
             return child.props.children;
           })}
-        </div>
+        </TabContent>
       </div>
     );
   }

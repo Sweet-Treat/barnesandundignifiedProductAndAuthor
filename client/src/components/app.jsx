@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 import ProductDetails from './productDetails.jsx';
+import AboutTheAuthor from './aboutTheAuthor.jsx';
 import Tabs from './tabs.jsx';
 //import './app.css';
 
 const TabsBox = styled.div`
-  width: 572px;
   margin: 0 auto;
 `;
 
@@ -24,6 +24,7 @@ class App extends React.Component {
     this.state = {
       book: {
         isbn13: '',
+        author: '',
         publisherName: '',
         publisherLink: '',
         publicationDate: '',
@@ -39,11 +40,25 @@ class App extends React.Component {
         soldBy: '',
         format: '',
 
-      }
+      },
+      author: {
+        author: '',
+        bio: '',
+        dateOfBirth: '',
+        placeOfBirth: '',
+        dateOfDeath: '',
+        placeOfDeath: '',
+        education: '',
+        hometown: '',
+        website: '',
+        image: '',
+      },
+      aboutTheAuthor: true,
     };
   }
 
   componentDidMount() {
+    // getting productDetails
     console.log('ISBN13 Props:', this.props.isbn13);
     return axios.get(`/products/${this.props.isbn13}`)
       .then((response)=> {
@@ -54,25 +69,42 @@ class App extends React.Component {
       })
       .catch((error)=> {
       // handle error
-        console.log('error:', error);
+        console.log('error getting productDetails:', error);
+      })
+      // getting aboutTheAuthor
+      .then (()=> {
+        console.log('/author', this.state.book.author);
+        return axios.get(`/author/${this.state.book.author}`);
+      })
+      .then((response)=> {
+        console.log('get a specific author:', response);
+        this.setState({author: response.data, aboutTheAuthor: true});
+        return response;
+      })
+      .catch((error)=> {
+        console.log('error getting AboutTheAuthor:', error);
+        this.setState({aboutTheAuthor: false});
       });
   }
 
   render() {
-    return (
-      <TabsBox>
-        <Tabs>
-          <Wrapper label="Product Details">
-            <ProductDetails
-              record={this.state.book}
-            />
-          </Wrapper>
-          <Wrapper label="Author">
-            About the author
-          </Wrapper>
-        </Tabs>
-      </TabsBox>
-    );
+    if (this.state.aboutTheAuthor === true) {
+      return (
+        <TabsBox>
+          <Tabs>
+            <Wrapper label="Product Details">
+              <ProductDetails record={this.state.book}/>
+            </Wrapper>
+            <Wrapper label="About the Author">
+              <AboutTheAuthor authorInfo={this.state.author}/>
+            </Wrapper>
+          </Tabs>
+        </TabsBox>
+      );
+    } else {
+      return (<ProductDetails record={this.state.book}/>);
+    }
+
   }
 }
 

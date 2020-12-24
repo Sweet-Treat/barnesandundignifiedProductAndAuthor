@@ -46,7 +46,7 @@ app.get('/category/:bookCategory', (req, res) => {
     .then ((records)=> {
       console.log('records are', records);
       if (records === null) {
-        throw 'Records do not found';
+        throw 'Records are not found';
       } else {
         res.status(200).send(records);
       }
@@ -56,6 +56,25 @@ app.get('/category/:bookCategory', (req, res) => {
       res.status(500).send(error);
     });
 });
+
+// Author details - get an author
+app.get('/author/:author', (req, res) => {
+  console.log('author:', req.params.author);
+  db.AuthorDetails.findOne({author: req.params.author})
+    .then ((authorRecord)=> {
+      console.log('authorRecord is', authorRecord);
+      if (authorRecord === null) {
+        throw 'authorRecord not found';
+      } else {
+        res.status(200).send(authorRecord);
+      }
+    })
+    .catch((error)=> {
+      console.log(error);
+      res.status(500).send(error);
+    });
+});
+
 app.use(express.static(__dirname + '/../client/dist'));
 //var server = app.listen(port, () => {
   //console.log(`Example app listening at http://localhost:${port}`);

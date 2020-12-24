@@ -30,13 +30,23 @@ let productDetailsSchema = mongoose.Schema({
   format: String
 });
 
+let aboutTheTheAuthorSchema = mongoose.Schema({
+  author: String,
+  bio: String,
+  dateOfBirth: Date,
+  placeOfBirth: String,
+  dateOfDeath: Date,
+  placeOfDeath: String,
+  education: String,
+  hometown: String,
+  website: String,
+  image: String
+});
+
 let ProductDetails = mongoose.model('ProductDetails', productDetailsSchema);
+let AuthorDetails = mongoose.model('AuthorDetails', aboutTheTheAuthorSchema);
 
-/*
-let saveproductDetailsToDB = (productDetails) => {
-  let newProductDetails = new ProductDetails (productDetails);
-    return newProductDetails.save();
-
-};*/
-//module.exports.save = save;
-module.exports.ProductDetails = ProductDetails;
+//module.exports.ProductDetails = ProductDetails;
+module.exports = {
+  ProductDetails, AuthorDetails,
+};

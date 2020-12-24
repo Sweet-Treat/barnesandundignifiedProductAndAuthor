@@ -36,7 +36,7 @@ class Tab extends Component {
 
   render() {
 
- 
+
     let tab;
     if (this.props.activeTab === this.props.label) {
       return (<TabListActive onClick={this.onClick}>{this.props.label}</TabListActive>);
