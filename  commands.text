@@ -1,0 +1,43 @@
+
+## installing Node.js on an Amazon EC2 Instance
+ create a Linux instance, connect to it using SSH, and then install Node.js to run on that instance.
+
+ Connect to your Linux instance as ec2-user using SSH.
+ //installing a node version manager:
+ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+ // Activate nvm:
+ . ~/.nvm/nvm.sh
+
+nvm install v10.22.1
+
+node -e "console.log('Running Node.js ' + process.version)"
+//Note
+The node installation only applies to the current EC2 session. Once the EC2 instance goes away, you'll have to re-install node again. The alternative is to make an AMI of the EC2 instance once you have the configuration that you want to keep, as described in the following section.
+
+ git clone https://github.com/Sweet-Treat/barnesandundignifiedProductAndAuthor.git
+ cd barnesandundignifiedProductAndAuthor
+ npm install
+
+ npm run react-dev
+
+ open new terminal ->  cd barnesandundignifiedProductAndAuthor ->  bash login.sh -> cd  barnesandundignifiedProductAndAuthor/ -> npm start
+
+ After you install Node.js on an Amazon EC2 instance, you can create an Amazon Machine Image (AMI) from that instance
+
+ //  MongoDB
+ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+ mongodb auth:
+ mongo
+ use productDetails
+ db.createUser({
+    user: 'avigail',
+    pwd: 'avigail',
+    roles: [{ role: 'readWrite', db:'productDetails'}]
+})
+
+Follow steps in : https://ianlondon.github.io/blog/mongodb-auth/
+Make sure to have in the config file: bindIp: 0.0.0.0 , instead of commenting out.
+Also remember to change the security group  for the AWS instance (instances screen->actions -> change security groups)
+test from my own computer:
+mongo -u avigail -p avigail 3.137.201.122/productDetails
