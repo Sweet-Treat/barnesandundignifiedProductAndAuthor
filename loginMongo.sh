@@ -1,1 +1,1 @@
-ssh -i "productdetails.pem" ubuntu@ec2-3-137-201-122.us-east-2.compute.amazonaws.com
+ssh -i "productdetails.pem"  ubuntu@ec2-3-139-131-8.us-east-2.compute.amazonaws.com
