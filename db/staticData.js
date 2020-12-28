@@ -191,7 +191,7 @@ const arrOfAuthors = [
   },
   {
     author: 'Brandon Sanderson',
-    bio: 'Brandon Sanderson grew up in Lincoln, Nebraska. He lives in Utah with his wife and children and teaches creative writing at Brigham Young University. He is the author of such bestsellers as the Mistborn® trilogy and its sequels, The Alloy of Law, Shadows of Self, and The Bands of Mourning; the Stormlight Archive novels The Way of Kings, Words of Radiance, and Oathbringer; and other novels, including The Rithmatist and Steelheart. In 2013, he won a Hugo Award for Best Novella for The Emperor\'s Soul, set in the world of his acclaimed first novel, Elantris. Additionally, he was chosen to complete Robert Jordan\'s Wheel of Time® sequence.',
+    bio: 'grew up in Lincoln, Nebraska. He lives in Utah with his wife and children and teaches creative writing at Brigham Young University. He is the author of such bestsellers as the Mistborn® trilogy and its sequels, The Alloy of Law, Shadows of Self, and The Bands of Mourning; the Stormlight Archive novels The Way of Kings, Words of Radiance, and Oathbringer; and other novels, including The Rithmatist and Steelheart. In 2013, he won a Hugo Award for Best Novella for The Emperor\'s Soul, set in the world of his acclaimed first novel, Elantris. Additionally, he was chosen to complete Robert Jordan\'s Wheel of Time® sequence.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,
@@ -203,7 +203,7 @@ const arrOfAuthors = [
   },
   {
     author: 'Joe Abercrombie',
-    bio: 'Joe Abercrombie was born in Lancaster in 1974, spent much of his youth in imaginary worlds, and left school with a good idea of how to make stuff up. After graduating from Manchester University he worked as a TV editor, but he never stopped making stuff up, and his first book, The Blade Itself, was published in 2006. He has since written eight more novels and a collection of stories in his First Law and Shattered Sea series. He lives in Bath with his wife Lou and their three children Grace, Eve and Teddy, and makes stuff up full-time.',
+    bio: 'was born in Lancaster in 1974, spent much of his youth in imaginary worlds, and left school with a good idea of how to make stuff up. After graduating from Manchester University he worked as a TV editor, but he never stopped making stuff up, and his first book, The Blade Itself, was published in 2006. He has since written eight more novels and a collection of stories in his First Law and Shattered Sea series. He lives in Bath with his wife Lou and their three children Grace, Eve and Teddy, and makes stuff up full-time.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,
@@ -227,7 +227,7 @@ const arrOfAuthors = [
   },
   {
     author: 'Michael Johnston',
-    bio: 'MICHAEL JOHNSTON has always been an avid reader of science fiction and fantasy. He studied architecture and ancient history at Lehigh University and earned a master’s degree in architecture from Columbia University. Michael worked as an architect in New York City before switching to writing full time. He is the co-author of the YA Heart of Dread trilogy (Frozen, Stolen, and Golden) with his wife, Melissa de la Cruz. He lives in Los Angeles with his wife and daughter.',
+    bio: 'has always been an avid reader of science fiction and fantasy. He studied architecture and ancient history at Lehigh University and earned a master’s degree in architecture from Columbia University. Michael worked as an architect in New York City before switching to writing full time. He is the co-author of the YA Heart of Dread trilogy (Frozen, Stolen, and Golden) with his wife, Melissa de la Cruz. He lives in Los Angeles with his wife and daughter.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,
@@ -239,7 +239,7 @@ const arrOfAuthors = [
   },
   {
     author: 'Isabelle Steiger',
-    bio: 'ISABELLE STEIGER was born in the city and grew up in the woods. She received her first notebook when she was eight, and she’s been filling them up ever since. She lives in New York, though her erstwhile companion, a very moody gray cat, has since retired and moved to Florida. The Empire’s Ghost is her first novel.',
+    bio: 'was born in the city and grew up in the woods. She received her first notebook when she was eight, and she’s been filling them up ever since. She lives in New York, though her erstwhile companion, a very moody gray cat, has since retired and moved to Florida. The Empire’s Ghost is her first novel.',
     dateOfBirth: undefined,
     placeOfBirth: '',
     dateOfDeath: undefined,
