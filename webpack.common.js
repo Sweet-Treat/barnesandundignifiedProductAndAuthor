@@ -4,7 +4,6 @@ const outPut = path.join(__dirname, './client/dist');
 
 
 module.exports = {
-  mode: 'development',
   entry: entryPath,
   module: {
     rules: [
