@@ -208,6 +208,12 @@ for (var i = 0; i < authors.length; i++) {
 
   let images = ['', '/authors_images/image1.jpg', '/authors_images/image2.jpg', '/authors_images/image3.jpg', '/authors_images/image4.jpg', '/authors_images/image5.jpg', '/authors_images/image6.jpg', '/authors_images/image7.jpg', '/authors_images/image8.jpg', '/authors_images/image9.jpg', '/authors_images/image10.jpg'];
 
+  images = images.map((image)=> {
+    if (image === '') {
+      return '';
+    }
+    return `http://3.16.221.35:5001/${image}`;
+  });
 
   let randomImages = getRandomValueFromArr(images);
   newAuthor.image = randomImages;
