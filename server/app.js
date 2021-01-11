@@ -75,9 +75,14 @@ app.get('/author/:author', (req, res) => {
     });
 });
 
+app.get('/bundle.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  console.log('getting bundle.js.gz');
+  next();
+});
+
 app.use(express.static(__dirname + '/../client/dist'));
-//var server = app.listen(port, () => {
-  //console.log(`Example app listening at http://localhost:${port}`);
-//});
+
 
 module.exports = app;
