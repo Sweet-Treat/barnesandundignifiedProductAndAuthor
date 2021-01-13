@@ -10,7 +10,7 @@ const AboutTheAuthorContainer = styled.div`
 `;
 const GridContainerAllCol = styled.div`
   display: grid;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 17% auto;
   padding: 0 10px;`;
 
 const GridContainer1Col = styled.div`
@@ -31,13 +31,16 @@ const GridImg = styled.img`
 const GridItem = styled.div`
   padding: 10px;
   text-align: left;
+  font-family: Lato,sans-serif;
   font-size: 14px;
   font-weight: normal;
   text-align: left;`;
 
 const Paragraph = styled.div`
+ color: #21282d;
  line-height: 28px;
- font-size: 13.5px;
+ font-size: 14px;
+ padding-left: 30px;
 `;
 const TitleH2 = styled.h2`
   text-align: center;

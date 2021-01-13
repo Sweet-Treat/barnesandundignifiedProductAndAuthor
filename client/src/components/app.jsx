@@ -110,4 +110,3 @@ class App extends React.Component {
 
 export default App;
 
-// to check the wrapper class if it is needed.
