@@ -5,7 +5,7 @@ import App from './components/app.jsx';
 
 
 const queryString = window.location.search;
-console.log('queryString is:', queryString);
+//console.log('queryString is:', queryString);
 const urlParams = new URLSearchParams(queryString);
 var isbn = urlParams.get('isbn');
 console.log('isbn is:', isbn);
