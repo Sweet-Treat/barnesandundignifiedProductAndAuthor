@@ -205,14 +205,17 @@ for (var i = 0; i < authors.length; i++) {
   newAuthor.hometown = randomHometown;
 
   // image
+  ///authors_images/image1.jpg
+  //https://s3-us-west-1.amazonaws.com/product.and.author.files/image1.jpg
 
-  let images = ['', '/authors_images/image1.jpg', '/authors_images/image2.jpg', '/authors_images/image3.jpg', '/authors_images/image4.jpg', '/authors_images/image5.jpg', '/authors_images/image6.jpg', '/authors_images/image7.jpg', '/authors_images/image8.jpg', '/authors_images/image9.jpg', '/authors_images/image10.jpg'];
+  let images = ['', 'image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg', 'image8.jpg', 'image9.jpg', 'image10.jpg'];
 
   images = images.map((image)=> {
     if (image === '') {
       return '';
     }
-    return `http://3.16.221.35:5001/${image}`;
+    //return `http://3.16.221.35:5001/${image}`;
+    return 'https://s3-us-west-1.amazonaws.com/product.and.author.files/${image}';
   });
 
   let randomImages = getRandomValueFromArr(images);
