@@ -51,12 +51,3 @@ module.exports = merge(common, {
   ]
 });
 
-
-
-/* plugins: [
-    new CompressionPlugin({
-      filename: '[path]bundle.js.gz[query]',
-      algorithm: 'gzip',
-      test: /\.(js|css)$/i,
-    })
-  ]*/
