@@ -175,8 +175,7 @@ const arrOfAuthors = [
     education: '',
     hometown: '',
     website: '',
-    /*image: 'http://3.16.221.35:5001/authors_images/barack_obama.jpg'*/
-    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/barack_obama.jpg'
+    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/dist/authors_images/barack_obama.jpg'
   },
   {
     author: '',
@@ -200,8 +199,7 @@ const arrOfAuthors = [
     education: '',
     hometown: '',
     website: '',
-    /*image: 'http://3.16.221.35:5001/authors_images/brandon_sanderson.jpg'*/
-    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/brandon_sanderson.jpg'
+    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/dist/authors_images/brandon_sanderson.jpg'
   },
   {
     author: 'Joe Abercrombie',
@@ -225,8 +223,7 @@ const arrOfAuthors = [
     education: '',
     hometown: '',
     website: '',
-    /*image: 'http://3.16.221.35:5001/authors_images/lev_grossman.jpg'*/
-    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/lev_grossman.jpg'
+    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/dist/authors_images/lev_grossman.jpg'
   },
   {
     author: 'Michael Johnston',
@@ -238,8 +235,7 @@ const arrOfAuthors = [
     education: '',
     hometown: '',
     website: '',
-    /*image: 'http://3.16.221.35:5001/authors_images/michael_johnston.jpg'*/
-    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/michael_johnston.jpg'
+    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/dist/authors_images/michael_johnston.jpg'
   },
   {
     author: 'Isabelle Steiger',
@@ -263,8 +259,7 @@ const arrOfAuthors = [
     education: '',
     hometown: '',
     website: '',
-    /*image: 'http://3.16.221.35:5001/authors_images/martha_hall_kelly.jpg'*/
-    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/martha_hall_kelly.jpg'
+    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/dist/authors_images/martha_hall_kelly.jpg'
   },
   {
     author: 'Rumaan Alam',
@@ -276,8 +271,7 @@ const arrOfAuthors = [
     education: '',
     hometown: '',
     website: '',
-    /*image: 'http://3.16.221.35:5001/authors_images/rumaan_alam.jpg'*/
-    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/rumaan_alam.jpg'
+    image: 'https://s3-us-west-1.amazonaws.com/product.and.author.files/dist/authors_images/rumaan_alam.jpg'
   },
   {
     author: 'Alex Trebek',
@@ -297,3 +291,4 @@ const arrOfAuthors = [
 module.exports = {
   arrOfBooks, arrOfAuthors,
 };
+
