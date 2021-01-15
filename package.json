@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "ignore-styles": "^5.0.1",
@@ -36,7 +37,7 @@
     "@babel/preset-react": "^7.12.5",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.1",
-    "compression-webpack-plugin": "^7.1.1",
+    "compression-webpack-plugin": "^7.1.2",
     "css-loader": "^5.0.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
@@ -51,7 +52,8 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0",
-    "webpack-merge": "^5.7.3"
+    "webpack-merge": "^5.7.3",
+    "webpack-s3-plugin": "^1.2.0-rc.0"
   },
   "jest": {
     "setupFilesAfterEnv": [
