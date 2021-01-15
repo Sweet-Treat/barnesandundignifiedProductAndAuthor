@@ -3,7 +3,6 @@ const entryPath = path.join(__dirname, './client/src/index.jsx');
 const outPut = path.join(__dirname, './client/dist');
 
 
-
 module.exports = {
   entry: entryPath,
   module: {
