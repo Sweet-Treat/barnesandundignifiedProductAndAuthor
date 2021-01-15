@@ -2,10 +2,10 @@
 const mongoose = require('mongoose');
 
 // seeding producDetails on the local machine
-mongoose.connect('mongodb://localhost/productDetails', {useNewUrlParser: true, useUnifiedTopology: true});
+//mongoose.connect('mongodb://localhost/productDetails', {useNewUrlParser: true, useUnifiedTopology: true});
 
 // seeding the EC2 instance
-//mongoose.connect('mongodb://avigail:avigail@3.139.131.8:27017/productDetails', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://avigail:avigail@3.139.131.8:27017/productDetails', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
