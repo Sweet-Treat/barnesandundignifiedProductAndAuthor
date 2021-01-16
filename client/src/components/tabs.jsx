@@ -53,10 +53,9 @@ class Tabs extends Component {
         </TabList>
         {/*the tab content depends on which tab you select*/}
         <TabContent>
-          {this.props.children.map((child) => {
-            if (child.props.label !== this.state.activeTab) { return undefined; }
-            return child.props.children;
-          })}
+          {this.props.children.filter((child)=> {
+            return child.props.label === this.state.activeTab;
+          })[0].props.children};
         </TabContent>
       </div>
     );
