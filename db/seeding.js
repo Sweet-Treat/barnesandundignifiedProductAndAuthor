@@ -211,7 +211,7 @@ for (var i = 0; i < authors.length; i++) {
     if (image === '') {
       return '';
     }
-    return 'https://s3-us-west-1.amazonaws.com/product.and.author.files/dist/authors_images/${image}';
+    return `https://s3-us-west-1.amazonaws.com/product.and.author.files/dist/authors_images/${image}`;
   });
 
   let randomImages = getRandomValueFromArr(images);
