@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import ProductDetails from './productDetails.jsx';
 import AboutTheAuthor from './aboutTheAuthor.jsx';
 import Tabs from './tabs.jsx';
-//import './app.css';
+
 
 const TabsBox = styled.div`
   margin: 0 auto;
