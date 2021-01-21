@@ -11,10 +11,12 @@ This repository contains the productAndAuthor module which is responsible for pr
 
 ![About the Author Module Screenshot](./screen_shots/screen_shot_about_the_author.png)
 
-![Sample of all the services running together (item detail page) Screenshot](screen_shots/screen_shot_all_the_service_together.png)
+![Sample of all the services running together (item detail page) Screenshot](./screen_shots/screenshot_all_the_service_together.png)
 
 
-## Technologies that were used: React js, MongoDb with mongoose library, Amazon EC2, Amazon S3, Express js, webpack, styled-components, enzyme.
+## Technologies that were used: 
+
+React js, MongoDb with mongoose library, Amazon EC2, Amazon S3, Express js, webpack, styled-components, enzyme.
 
 
 ## Getting Started:
